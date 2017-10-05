@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', function () {
+    //
+});
+
+/**
+ * Add New Task
+ */
+Route::post('/task', function (Request $request) {
+    //
+});
+
+/**
+ * Delete Task
+ */
+Route::delete('/task/{task}', function (Task $task) {
+    //
+});
