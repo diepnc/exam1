@@ -25,21 +25,16 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Task List
-                </a>
+    <div class="col-sm-offset-2 col-sm-8">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                  <a class="navbar-brand" href="{{ url('/') }}"><b>Task List:</b></a>
+              </div>          
             </div>
-
-        </div>
-    </nav>
-
-    @yield('content')
-
+        </nav>        
+        @yield('content')
+    </div>
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
