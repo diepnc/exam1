@@ -21,7 +21,14 @@
         }
         .fa-btn {
             margin-right: 6px;
+        }        
+        .new_task{
+            border: solid 2px grey; 
         }
+        .current_tasks{
+            border: solid 3px grey; 
+        }        
+        
     </style>
 </head>
 <body id="app-layout">
