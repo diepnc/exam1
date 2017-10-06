@@ -1,4 +1,5 @@
 <?php
+use App\Task;
 use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,7 @@ Route::get('/tasks', function () {
  */
 Route::post('/task', function (Request $request) {
     $validator = Validator::make($request->all(), [
-        'name' => 'required|max:5',
+        'name' => 'required|max:20',
     ]);
     
     if ($validator->fails()) {
@@ -33,6 +34,11 @@ Route::post('/task', function (Request $request) {
                         ->withErrors($validator)
                         ->withInput();
         }
+        
+    $task = new Task;
+    $task->name = $request->name;
+    $task->save();
+    return redirect('/tasks');
     //
 });
 
