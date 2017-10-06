@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+<!-- resources/views/common/errors.blade.php -->
+
+@if (count($errors) > 0)
+    <!-- Form Error List -->
+    <div class="alert alert-danger">
+        <strong>Have some wrong your input information!</strong>
+
+        <br><br>
+
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif

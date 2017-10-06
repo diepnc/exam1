@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +24,15 @@ Route::get('/tasks', function () {
  * Add New Task
  */
 Route::post('/task', function (Request $request) {
+    $validator = Validator::make($request->all(), [
+        'name' => 'required|max:5',
+    ]);
+    
+    if ($validator->fails()) {
+            return redirect('/tasks')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
     //
 });
 
