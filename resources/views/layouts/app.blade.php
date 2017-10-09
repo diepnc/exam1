@@ -33,7 +33,7 @@
 </head>
 <body id="app-layout">
     <div class="col-sm-offset-2 col-sm-8">
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default" style="border: solid 2px grey">
             <div class="container-fluid">
               <div class="navbar-header">
                   <a class="navbar-brand" href="{{ url('/') }}"><b>Task List:</b></a>

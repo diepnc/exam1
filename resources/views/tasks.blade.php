@@ -44,7 +44,6 @@
             <div class="panel-heading">
                 <b>Current Tasks:</b>
             </div>
-
             <div class="panel-body">
                 <table class="table table-striped task-table">
                     <!-- Table Headings -->
